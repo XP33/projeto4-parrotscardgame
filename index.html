@@ -1,121 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/reset.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
-
-
-    <title>projeto3-driveneats</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <title>Parrots Card Game</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header_tit">DrivenEats</div>
-        <div class="header_subtit">Sua comida em 6 minutos</div>
-    </div>
+  <header>
+    <h1 class="title">PARROT CARD GAME</h1>
+    <span class="timer">0</span>
+  </header>
 
-    <main>
-        <nav class="select first">
-            <div class="select_tit">Primeiro, seu prato</div>
-            <ol class="dishes options" data-identifier="dishes">
+  <main>
+    <section class="cards-container"></section>
+  </main>
 
-                <li class="option p1" data-identifier="food-option" onclick="selectDish('p1', 'Ramen', '24.90')">
-                    <img class="images" src="media/ramen.jpeg" />
-                    <div class="titulo" data-identifier="food-title">Ramen </div>
-                    <div class="descricao">Um pouco de Naruto, <br>um pouco de ramen</div>
-                    <div class="preco" data-identifier="food-price">R$ 24,90</div>
-                </li>
-                <li class="option p2" data-identifier="food-option" onclick="selectDish('p2', 'Onigiri', '19.90')">
-                    <img class="images" src="media/onigiri.jpg" />
-                    <div class="titulo" data-identifier="food-title">Onigiri</div>
-                    <div class="descricao">Um pouco de OP, <br>um pouco de arroz</div>
-                    <div class="preco" data-identifier="food-price">R$ 19,90</div>
-                </li>
-                <li class="option p3" data-identifier="food-option" onclick="selectDish('p3', 'Gohan', '22.50')">
-                    <img class="images" src="media/gohan.png" />
-                    <div class="titulo" data-identifier="food-title">Gohan</div>
-                    <div class="descricao">Um pouco de DBZ, <br>um pouco de ovo</div>
-                    <div class="preco" data-identifier="food-price">R$ 22,50</div>
-                </li>
-            </ol>
-        </nav>
-
-        <nav class="select second">
-            <div class="select_tit">Agora, sua bebida</div>
-            <ol class="drinks options">
-                <li class="option b1" data-identifier="food-option" onclick="selectDrink('b1', 'Frozen', '14.90')">
-                    <img class="images" src="media/drink1.jpg" />
-                    <div class="titulo" data-identifier="food-title">Frozen</div>
-                    <div class="descricao">Mix de frutas com sorvetes</div>
-                    <div class="preco" data-identifier="food-price">R$ 14,90</div>
-                </li>
-                <li class="option b2" data-identifier="food-option" onclick="selectDrink('b2', 'Suquinho', '8.00')">
-                    <img class="images" src="media/drink3.jpg" />
-                    <div class="titulo" data-identifier="food-title">Suquinho</div>
-                    <div class="descricao">Suco natural gelado</div>
-                    <div class="preco" data-identifier="food-price">R$ 8,00</div>
-                </li>
-                <li class="option b3" data-identifier="food-option" onclick="selectDrink('b3', '+18', '19.90')">
-                    <img class="images" src="media/drink2.png" />
-                    <div class="titulo" data-identifier="food-title">+18</div>
-                    <div class="descricao">Drink alcoólico</div>
-                    <div class="preco" data-identifier="food-price">R$ 19,90</div>
-                </li>
-            </ol>
-        </nav>
-
-        <nav class="select third">
-            <div class="select_tit">Por fim, sua sobremesa</div>
-            <ol class="desserts options">
-                <li class="option s1" data-identifier="food-option" onclick="selectDessert('s1', 'Donnut', '12.50')">
-                    <img class="images" src="media/donnt.jpg" />
-                    <div class="titulo" data-identifier="food-title">Donnut</div>
-                    <div class="descricao">Donnuts cremosos, <br>vários sabores</div>
-                    <div class="preco" data-identifier="food-price">R$ 12,50</div>
-                </li>
-                <li class="option s2" data-identifier="food-option" onclick="selectDessert('s2', 'Pudim', '14.90')">
-                    <img class="images" src="media/pudding.jpg" />
-                    <div class="titulo" data-identifier="food-title">Pudim</div>
-                    <div class="descricao">Pudim de leite condensado</div>
-                    <div class="preco" data-identifier="food-price">R$ 14,90</div>
-                </li>
-                <li class="option s3" data-identifier="food-option" onclick="selectDessert('s3', 'Bolo', '11.90')">
-                    <img class="images" src="media/bolo.jpg" />
-                    <div class="titulo" data-identifier="food-title">Bolo</div>
-                    <div class="descricao">Bolo de chocolate</div>
-                    <div class="preco" data-identifier="food-price">R$ 11,90</div>
-                </li>
-            </ol>
-        </nav>
-    </main>
-
-    <div class="footer">
-        <div class="button grey">
-            <div class="button_text">Selecione os 3 itens<br>para fechar o pedido</div>
-        </div>
-
-        <div class="button green escondido">
-            <div class="button_text" onclick='enviaOrdem()'>Fechar pedido</div>
-        </div>
-    </div>
-
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
